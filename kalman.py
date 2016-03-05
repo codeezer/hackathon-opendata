@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
 import numpy
 import pylab
-
+import test as t
 
 # intial parameters
-z = [300,400,500,500,600,700,500,600,500]
+z = t.get_data()
 n_iter = len(z) 
 sz = (n_iter,) # size of array
 
@@ -37,11 +36,12 @@ for k in range(1,n_iter):
     P[k] = (1-K[k])*Pminus[k]
 
 pylab.figure()
-pylab.plot(z,'k+',label='noisy measurements')
-pylab.plot(xhat,'b-',label='a posteri estimate')
+pylab.plot(z,'k+',label='Feeded Data')
+pylab.plot(xhat,'b-',label='Estimatation')
+
 pylab.legend()
-pylab.xlabel('Iteration')
-pylab.ylabel('Voltage')
+pylab.xlabel('Year')
+pylab.ylabel('No. of Doctors Required')
 
 pylab.show()
 print(xhat[-1])
