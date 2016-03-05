@@ -1,15 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Kalman filter example demo in Python
-
-# A Python implementation of the example given in pages 11-15 of "An
-# Introduction to the Kalman Filter" by Greg Welch and Gary Bishop,
-# University of North Carolina at Chapel Hill, Department of Computer
-# Science, TR 95-041,
-# http://www.cs.unc.edu/~welch/kalman/kalmanIntro.html
-
-# by Andrew D. Straw
 
 import numpy
 import pylab
