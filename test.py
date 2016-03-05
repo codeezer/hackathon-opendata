@@ -7,16 +7,17 @@ import re
 
 fi = open('data.txt','r')
 list_data = fi.readlines()
-lists = [[]]
+data_size = len(list_data)
+lists = [[0 for x in range(3)] for x in range(data_size)] 
 
-for i in range(len(list_data)):
+for i in range(data_size):
     temp1 = re.split('\n',list_data[i])
     temp = re.split(' ',temp1[0])
-    #lists[i].append(temp[0])
-    #lists[i].append(temp[1])
-    #lists[i].append(temp[2])
+    lists[i][0] = temp[0]
+    lists[i][1] = temp[1]
+    lists[i][2] = temp[2]
 
-print(temp[0])
+for i in range(data_size):
+    lists[i].append(int(lists[i][1])/2-int(lists[i][2]))
 
-print(temp[1])
-print(temp[2])
+print(lists)
